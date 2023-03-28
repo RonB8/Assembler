@@ -1,0 +1,3 @@
+/Users/elshord/Desktop/CS/2023A/lab/mmns/mmn14/almost/cmake-build-debug/CMakeFiles/mmn14_1.dir
+/Users/elshord/Desktop/CS/2023A/lab/mmns/mmn14/almost/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/elshord/Desktop/CS/2023A/lab/mmns/mmn14/almost/cmake-build-debug/CMakeFiles/rebuild_cache.dir
