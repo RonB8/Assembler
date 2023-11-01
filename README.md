@@ -2,9 +2,9 @@
 This program is designed to simulate an assembler program. The idea is that the program receives a file containing instructions in assembly language and converts them to machine language.
 
 Instructions for using the assembler: 
-1. Open cmd from the project folder
+1. Open cmd from the project folder.
 2. Run the command: "make" and press enter, now executable files will be created, including "assembler.out"
-3. Run the command: "./assembler.out" + filename* and press Enter
+3. Run the command: "./assembler.out" + filename* and press Enter.
 
 *filename is the name of the file that contains the assembly code, for the sake of the example you can run the attached file "tester.txt" as filename.
 
