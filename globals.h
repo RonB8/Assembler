@@ -65,16 +65,16 @@ typedef struct List LabelList;
 typedef char codeLine[14];
 
 typedef struct {
-    unsigned char AER:2;
-    unsigned char operandDest:2;
-    unsigned char operandSrc:2;
-    unsigned char opcode:4;
-    unsigned char param2:2;
-    unsigned char param1:2;
-    unsigned char wordPos:3; /* 0 if this is the instruction word, 1 if is a first additional word, and so on*/
-    unsigned char addressFlag:1;
-    unsigned char lineType:2;
-    unsigned char lineCounter;
+    unsigned int AER:2;
+    unsigned int operandDest:2;
+    unsigned int operandSrc:2;
+    unsigned int opcode:4;
+    unsigned int param2:2;
+    unsigned int param1:2;
+    unsigned int wordPos:3; /* 0 if this is the instruction word, 1 if is a first additional word, and so on*/
+    unsigned int addressFlag:1;
+    unsigned int lineType:2;
+    unsigned int lineCounter;
 }Bits;
 
 typedef struct {

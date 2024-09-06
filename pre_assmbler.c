@@ -66,10 +66,12 @@ FILE* mcr_labels_spread(FILE* source, char* fileName)
 void check_label(char* str, int* labelsCounter)
 {
     int n;
-    char temp[strlen(str)];
+/*    char temp[strlen(str)]; */
+    char *temp = (char *)malloc(strlen(str) * sizeof(char));
     char* s;
     s = strtok(temp," ");
     strcpy(temp, str);
+    free(temp);
     n = strlen(s)-1;
     if(s[n] == ':')
         (*labelsCounter)++;
@@ -84,7 +86,7 @@ Mcr* idetify_mcr(Mcr* root, char* str)
         return root;
     else
 
-        return idetify_mcr(root->nextMcr, str);
+        return idetify_mcr((Mcr *)(root->nextMcr), str);
 }
 
 void check_mcr(char* str, int* mcrFlag)
@@ -114,7 +116,7 @@ void push_mcr(Mcr** rootMcr, Mcr* newMcr)
         (*rootMcr)->nextMcr = NULL;
     }
     else
-        push_mcr((&(*rootMcr)->nextMcr), newMcr);
+        push_mcr((Mcr**)(&(*rootMcr)->nextMcr), newMcr);
 }
 
 
