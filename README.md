@@ -1,5 +1,6 @@
 # Assembler
-This program is designed to simulate an assembler program. The idea is that the program receives a file containing instructions in assembly language and converts them to machine language.
+This program is designed to simulate an assembler program.
+The idea is that the program receives a file containing instructions in assembly language and converts them to machine language.
 
 Instructions for using the assembler: 
 1. Open cmd from the project folder.
