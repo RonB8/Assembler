@@ -3,8 +3,8 @@ This program is designed to simulate an assembler program. The idea is that the 
 
 Instructions for using the assembler: 
 1. Open cmd from the project folder.
-2. Run the command: "make" and press enter, now executable files will be created, including "assembler.out"
-3. Run the command: "./assembler.out" + filename* and press Enter.
+2. Insert the command: "make" and press enter, now executable files will be created, including "assembler.out"
+3. Insert the command: "./assembler.out" + filename* and press Enter.
 
 *filename is the name of the file that contains the assembly code, for the sake of the example you can run the attached file "tester.txt" as filename.
 
