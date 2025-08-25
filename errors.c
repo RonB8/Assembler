@@ -4,9 +4,9 @@
 
 #include "errors.h"
 
-/*This function print to the screen while an error is founded.
- * @param err represent the error type.
- * @param address represent the address where the error founded.
+/*This function prints to screen while an error is founded.
+ * @param err represents the error type.
+ * @param address represents the address where the error founded.
  * */
 void printError(int err, int address)
 {
@@ -61,4 +61,5 @@ void printError(int err, int address)
             break;
     }
 } /*end of print error*/
+
 
