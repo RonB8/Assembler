@@ -26,15 +26,18 @@ int main(int argc, char* argv[])
     char *input;
     char *ending = ".as";
     char *c;
-
     /*running for all files which given as arguments in the command line*/
     for(i = 1; i < argc; i++)
     {
         input = argv[i];
-        c = (char*) malloc(strlen(ending) + strlen(input));
+        c = (char*) malloc(strlen(ending) + strlen(input) + 1);
         strcpy(c, argv[i]);
         strcat(c, ending);
         preAs = fopen(c, "r");
+	if(preAs == NULL){
+		perror("Error opening file");
+		continue;
+	}
         file = mcr_labels_spread(preAs, argv[i]);
         get_line_info(file, argv[i]);
         free(c);
