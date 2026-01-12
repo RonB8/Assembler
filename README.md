@@ -65,5 +65,3 @@ To remove the compiled object files and the executable, run:
 make clean
 
 ```
-
-```
