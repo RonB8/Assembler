@@ -30,7 +30,7 @@ FILE* mcr_labels_spread(FILE* source, char* fileName)
         {
             m = (Mcr*)malloc(sizeof(Mcr));
             reset_mcr(m);
-            mcrName = malloc(sizeof(strtok(line+4," ")));
+            mcrName = malloc(strlen(strtok(line+4," ")));
             strcpy(mcrName, strtok(line+4," "));
             m->name = mcrName;
             m->start = ftell(source) - 1;
@@ -69,8 +69,8 @@ void check_label(char* str, int* labelsCounter)
 /*    char temp[strlen(str)]; */
     char *temp = (char *)malloc(strlen(str) * sizeof(char));
     char* s;
-    s = strtok(temp," ");
     strcpy(temp, str);
+    s = strtok(temp, " ");
     free(temp);
     n = strlen(s)-1;
     if(s[n] == ':')
