@@ -40,6 +40,6 @@ boolean insert_address(CodList** code, int address, int addMethod)
         return TRUE;
     }
     else
-        return insert_address(&(code)->next, address, addMethod);
+        return insert_address(&(*code)->next, address, addMethod);
 }
 
