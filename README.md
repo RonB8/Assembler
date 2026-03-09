@@ -10,6 +10,37 @@ This project is a simulation of an Assembler. It processes assembly language sou
 - **Custom Encoding**: Outputs machine code in a unique base-2 format where `0` is represented by `.` and `1` is represented by `/`.
 - **Support for Entries and Externals**: Generates dedicated files for `.entry` and `.extern` labels.
 
+## Workflow
+flowchart TD
+    %% Input
+    Input["📄 Input File (.as)"] --> PreAssembler
+
+    %% Pre-Assembler
+    subgraph Stage 1: Pre-Processing
+        PreAssembler["⚙️ Pre-Assembler"] --> |Expands Macros| AMFile["📄 Expanded File (.am)"]
+    end
+
+    %% First Pass
+    subgraph Stage 2: First Pass
+        AMFile --> FirstPass["🔍 First Pass (first_pass.c)"]
+        FirstPass -.-> |Builds| SymbolTable[("📋 Symbol Table")]
+        FirstPass -.-> |Calculates| Counters["🧮 IC & DC Counters"]
+    end
+
+    %% Second Pass
+    subgraph Stage 3: Second Pass
+        FirstPass --> |Syntax Validated| SecondPass["🏗️ Second Pass (sec_pass.c)"]
+        SymbolTable -.-> |Resolves Labels| SecondPass
+        Counters -.-> |Memory Addresses| SecondPass
+    end
+
+    %% Output
+    subgraph Output: Generated Files
+        SecondPass --> |Machine Code| OB["📦 Object File (.ob)"]
+        SecondPass --> |Entry Points| ENT["🚪 Entries File (.ent)"]
+        SecondPass --> |External Refs| EXT["🔗 Externals File (.ext)"]
+    end
+
 ## Prerequisites
 - **Compiler**: `gcc`
 - **Operating System**: Linux / Unix-based system (for `make` and `.out` execution).
