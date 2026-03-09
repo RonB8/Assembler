@@ -32,10 +32,10 @@ To run the assembler, provide the name of your assembly source file(s) **without
 ```
 
 **Example:**
-If you have a source file named `tester.as`, run:
+If you have a source file named `example.as`, run:
 
 ```bash
-./assembler.out tester
+./assembler.out example
 
 ```
 
