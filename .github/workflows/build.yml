@@ -1,0 +1,26 @@
+name: C Build
+
+# When should this workflow run? On push or pull request to the main branch
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  build:
+    # The operating system the virtual environment will use
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step 1: Check out the repository code to the runner
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    # Step 2: Install GCC and Make (usually pre-installed, but added for safety)
+    - name: Install GCC
+      run: sudo apt-get update && sudo apt-get install -y gcc make
+
+    # Step 3: Run the build command using Make
+    - name: Build with Make
+      run: make
