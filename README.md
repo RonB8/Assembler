@@ -1,3 +1,5 @@
+[![C Build](https://github.com/RonB8/Assembler/actions/workflows/build.yml/badge.svg)](https://github.com/RonB8/Assembler/actions/workflows/build.yml)
+
 # 14-Bit Assembler Simulator
 
 This project is a simulation of an Assembler. It processes assembly language source files, handles macro expansions, and converts the code into a unique 14-bit machine language representation.
