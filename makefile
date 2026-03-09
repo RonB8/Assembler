@@ -7,6 +7,8 @@ CFILES = $(wildcard *.c)
 HFILES = $(wildcard *.h)
 OBJECTS = $(patsubst %.c, %.o, $(CFILES))
 
+.PHONY: all debug release clean
+
 all: $(TARGET)
 
 $(TARGET): $(OBJECTS)
@@ -21,4 +23,4 @@ release: $(OBJECTS)
 	$(CC) $(OPT) $^ -o $(TARGET)
 
 clean:
-	rm $(TARGET) $(OBJECTS)
+	rm $(TARGET) $(OBJECTS) *.am *.ob *.ent *.ext
