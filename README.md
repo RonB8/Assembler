@@ -11,6 +11,8 @@ This project is a simulation of an Assembler. It processes assembly language sou
 - **Support for Entries and Externals**: Generates dedicated files for `.entry` and `.extern` labels.
 
 ## Workflow
+
+```mermaid
 flowchart TD
     %% Input
     Input["📄 Input File (.as)"] --> PreAssembler
