@@ -11,7 +11,6 @@ This project is a simulation of an Assembler. It processes assembly language sou
 - **Support for Entries and Externals**: Generates dedicated files for `.entry` and `.extern` labels.
 
 ## Workflow
-
 ```mermaid
 flowchart TD
     %% Input
@@ -42,6 +41,7 @@ flowchart TD
         SecondPass --> |Entry Points| ENT["🚪 Entries File (.ent)"]
         SecondPass --> |External Refs| EXT["🔗 Externals File (.ext)"]
     end
+```
 
 ## Prerequisites
 - **Compiler**: `gcc`
