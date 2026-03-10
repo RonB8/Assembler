@@ -43,6 +43,11 @@ flowchart TD
     end
 ```
 
+
+
+https://github.com/user-attachments/assets/96876901-259e-4843-a182-c2e49dfed52e
+
+
 ## Prerequisites
 - **Compiler**: `gcc`
 - **Operating System**: Linux / Unix-based system (for `make` and `.out` execution).
