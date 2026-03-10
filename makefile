@@ -2,7 +2,7 @@
 TARGET = assembler.out
 CC = gcc
 OPT = 
-CFLAGS = -ansi -pedantic -Wall -g $(CPPFLAGS)
+CFLAGS = -ansi -w -g $(CPPFLAGS)
 CFILES = $(wildcard *.c)
 HFILES = $(wildcard *.h)
 OBJECTS = $(patsubst %.c, %.o, $(CFILES))
